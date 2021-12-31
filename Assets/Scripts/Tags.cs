@@ -7,4 +7,9 @@ public static class Tags
     public static string AXIS_VERTI = "Vertical";
     public static string AXIS_MOUSE_X = "Mouse X";
     public static string AXIS_MOUSE_Y = "Mouse Y";
+
+    //Interactives
+    public static string INTER_BUTTON = "Buttons";
+    public static string INTER_PLAYER = "Player";
+
 }
