@@ -119,7 +119,6 @@
     <Compile Include="Assets\Imports\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\FOVKick.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Imports\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Vehicles\Car\Scripts\CarUserControl.cs" />
     <Compile Include="Assets\Imports\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
@@ -135,8 +134,7 @@
     <Compile Include="Assets\Imports\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\FPSCounter.cs" />
     <Compile Include="Assets\Imports\Standard Assets\Utility\SimpleActivatorMenu.cs" />
-    <Compile Include="Assets\Scripts\Player\MouseView.cs" />
-    <Compile Include="Assets\Scripts\Player\CharacterView.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Imports\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

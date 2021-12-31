@@ -334,10 +334,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 887521459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bdcaf3f07f330e42918520eea3da946, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d77a0007dcfcb4786ef4c5d62d73ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 50
+  moveSpeed: 2
   viewSpeed: 2
 --- !u!54 &887521462
 Rigidbody:
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewSpeed: 2
+  isLooking: 0
 --- !u!81 &2097135189
 AudioListener:
   m_ObjectHideFlags: 0

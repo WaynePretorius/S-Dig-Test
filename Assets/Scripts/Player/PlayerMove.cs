@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     //Cached Variables
     [Header("Player Movement Settings")]
@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         FreeLook();
-        Getkey();
+        MoveVertical();
+        MoveHorizontal();
     }
 
     //Method that handles the camera view
@@ -72,21 +73,6 @@ public class PlayerMovement : MonoBehaviour
         float newRotationY = transform.localEulerAngles.x - Input.GetAxis(Tags.AXIS_MOUSE_Y) * viewSpeed;
 
         transform.localEulerAngles = new Vector3(newRotationY, newRotationX, Mathf.Epsilon);
-    }
-
-    //Method that gets called for keys pressed
-    private void Getkey()
-    {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S))
-        {
-            MoveVertical();
-        }
-
-        if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
-        {
-            MoveHorizontal();
-        }
-
     }
 
     //move the character forward and backward
