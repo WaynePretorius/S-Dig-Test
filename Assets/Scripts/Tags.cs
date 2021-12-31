@@ -1,9 +1,10 @@
 //Static class for all string referneces
-public  static class Tags
+public static class Tags
 {
 
-    //movement Tags
-    public static string MOVE_HORIZON = "";
-    public static string MOVE_VERTI = "";
-
+    //Axis Tags
+    public static string AXIS_HORIZON = "Horizontal";
+    public static string AXIS_VERTI = "Vertical";
+    public static string AXIS_MOUSE_X = "Mouse X";
+    public static string AXIS_MOUSE_Y = "Mouse Y";
 }
