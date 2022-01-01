@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
         SpawnCharacter(GetRandomPosition());   
     }
 
+    //Get a random transform for the spawnlocations and return it
     private Transform GetRandomPosition()
     {
         int randomlocation = Random.Range(0, spawnLocation.Length);
@@ -22,16 +23,10 @@ public class Spawner : MonoBehaviour
         return spawnLocation[randomlocation];
     }
 
+    //spawn the player at the desired spawnloacation
     private void SpawnCharacter(Transform pos)
     {
         Instantiate(player, pos.transform.position, Quaternion.identity);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            SpawnCharacter(GetRandomPosition());
-        }
-    }
 }

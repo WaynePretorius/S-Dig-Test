@@ -5,16 +5,53 @@ using UnityEngine.SceneManagement;
 
 public class Sceneloader : MonoBehaviour
 {
-    private void OnCollisionStay(Collision col)
-    {
-        if(col.gameObject.tag == Tags.INTER_PLAYER)
-        {
-            if (Input.GetKeyDown(KeyCode.Z))
-            {
-                int currentScene = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(currentScene + 1);
-            }
+    //Game States
+    private bool canPress = false;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && canPress)
+        {
+            SceneManager.LoadScene(GetScene() + 1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            SceneManager.LoadScene(GetScene());
+        }
+
+    }
+
+    //method for the start button
+    public void StartGame()
+    {
+        SceneManager.LoadScene(GetScene() + 1);
+    }
+
+    //return the current scene index
+    private int GetScene()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        return sceneIndex;
+    }
+
+    //when a trigger collider enters
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == Tags.INTER_PLAYER)
+        {
+            canPress = true;
+        }
+    }
+
+    //when a trigger collider exits
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == Tags.INTER_PLAYER)
+        {
+            canPress = false;
         }
     }
 }
+
