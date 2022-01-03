@@ -12,7 +12,7 @@ public class Sceneloader : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canPress)
         {
-            SceneManager.LoadScene(GetScene() + 1);
+            SceneManager.LoadScene(GetScene());
         }
 
         if (Input.GetKeyDown(KeyCode.L))
